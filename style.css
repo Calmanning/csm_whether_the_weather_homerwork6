@@ -1,0 +1,25 @@
+.welcome {
+    background-color: powderblue;
+}
+
+.current {
+    background-color: palegreen;
+    width: 100vw;
+}
+
+.searches{
+    background-color:palevioletred
+}
+
+.main {
+    background-color: peru;
+}
+
+.weather {
+    border: 1px solid black;
+}
+
+.tableRow {
+    border: 1px solid black;
+}
+
