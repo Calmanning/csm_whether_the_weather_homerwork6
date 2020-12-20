@@ -19,63 +19,53 @@
 <body>
 
 
-
+    <!-- The header. Used a nav for it. -->
     <ul class="nav justify-content-center welcome">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-    </ul>
+        <h3>The Weather Out There</h3>
 
+    </ul>
+    <!-- the whole weathering search and display -->
     <div class="container">
+
         <div class="row">
-            <div class="col-sm-4">
-                <h3> Where you going? </h3>
-                <div class="imput-group">
-                <input type="text" placeholder="Which city?">
-                <button>Clear cities</button>
-                <table>
-                    <tr>
-                    <td class="tableRow"> test time?</td>
-                    </tr>
-                    <tr>
-                    <td class="tableRow">what about...</td>
-                    </tr>
-                </table>
+            <div class="col-sm-4 searches">
+                <h4> Where are you going? </h4>
+                <div id="city" class="imput-group">
+                    <input type="text" placeholder="Which city?">
                 </div>
+                <br>
+                    <button id="clear" class="rounded">Clear cities</button>
+                    <br>
+                        <p class="past-city">test </p>
+                        <p class="past-city"> other test</p>
+                
             </div>
             <div class="col-sm-8">
+                <!-- The "right side" of the page featuring the current weather conditions and the five-day. -->
                 <div class="row weather">
                     <div class="col-12" id="theNow">
-                            <ul>
-                                <li>Temp:
-                                    <p></p>
-                                </li>
-                                <li>Humidity:
-                                    <p></p>
-                                </li>
-                                <li>Wind Speed:
-                                    <p></p>
-                                </li>
-                                <li>UV Index:
-                                    <p></p>
-                                </li>
-                            </ul>
+                        <ul>
+                            <li>Temp:
+                                <p id="today-temp"></p>
+                            </li>
+                            <li>Humidity:
+                                <p id="today-hu"></p>
+                            </li>
+                            <li>Wind Speed:
+                                <p id="today-wind"></p>
+                            </li>
+                            <li>UV Index:
+                                <p id="today-uv"></p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-sm-12 five-day">
-                    <h3>This Would Be Your Future</h3>
+                    <h4>This Would Be Your Future:</h4>
                     <div class="row">
                         <!-- I'm stopping here for the night...pick up here: need more col's (maybe?) to finish putting in the 5-day. -->
-                        <col-sm-2></col-sm-2>
+                        <div class="col-sm-2 thumbnail bg-info"></div>
+                        
                     </div>
                 </div>
             </div>

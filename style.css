@@ -8,7 +8,7 @@
 }
 
 .searches{
-    background-color:palevioletred
+    background-color: rgb(230, 227, 227)
 }
 
 .main {
@@ -19,7 +19,16 @@
     border: 1px solid black;
 }
 
-.tableRow {
-    border: 1px solid black;
+#clear {
+    margin: ;
 }
 
+#city {
+    margin-top: 3 0 auto;
+    margin-bottom: 3 0 auto;
+}
+
+.past-city {
+    display: flex;
+    margin: 3 0 auto ;
+}
