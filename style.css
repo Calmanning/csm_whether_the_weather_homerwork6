@@ -32,3 +32,7 @@
     display: flex;
     margin: 3 0 auto ;
 }
+.five-day{
+    color: rgb(238, 234, 234);
+    margin: 0 5px;
+}
