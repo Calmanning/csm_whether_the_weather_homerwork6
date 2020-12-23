@@ -26,30 +26,29 @@
     </ul>
     <!-- the whole weathering search and display -->
     <div class="container">
-
         <div class="row">
             <div class="col-sm-4 searches">
                 <h4> Where are you going? </h4>
 
-                <form>
-                    <div class="input-group mb-3">
-                        <input type="text" id="city" class="form-control" placeholder="which city?"
-                            aria-describedby="button-addon2">
-                        <button id="search" class="btn btn-outline-secondary" type="button"
-                            id="button-addon2">search</button>
-                    </div>
-                </form>
+
+                <div class="form-group form-inline">
+                    <input type="text" id="city" class="form-control" placeholder="which city?"
+                        aria-describedby="button-addon2">
+                    <button id="search" class="btn btn-outline-secondary" id="button-addon2">search</button>
+                </div>
+
 
                 <button id="clear" class="rounded">Clear history</button>
                 <br>
                 <div id="past-cities"> </div>
-                </div>
-                
+            </div>
+
             <div class="col-sm-8">
                 <!-- The "right side" of the page featuring the current weather conditions and the five-day. -->
                 <div class="row weather">
                     <div class="col-12" id="theNow">
                         <h3 id="today-city"></h3>
+                        <p id=weather-icon></p>
                         <ul>
                             <li>Temp:
                                 <p id="today-temp"></p>
@@ -66,62 +65,16 @@
                         </ul>
                     </div>
                 </div>
-                <div id="forecast" class="col-sm-12">
-                    <h4>This Would Be Your Future:</h4>
-                    <!-- <div class="row forecast">
-                        <div class="col-sm-2 thumbnail bg-info rounded five-day">
-                            <p id="future-date"></p>
-                            <p id="future-icon"></p>
-                            <p>Temp: <span id="future-temp"> </span> </p>
-                            <p>Humidity: <span id="future-humidity"></span></p>
-                        </div>
-                        <div class="col-sm-2 thumbnail bg-info rounded five-day">
-                            <p id="future-date"></p>
-                            <p id="future-icon"></p>
-                            <p>Temp: <span id="future-temp"> </span> </p>
-                            <p>Humidity: <span id="future-humidity"></span></p>
-                        </div>
-                        <div class="col-sm-2 thumbnail bg-info rounded five-day">
-                            <p id="future-date"></p>
-                            <p id="future-icon"></p>
-                            <p>Temp: <span id="future-temp"> </span> </p>
-                            <p>Humidity: <span id="future-humidity"></span></p>
-                        </div>
-                        <div class="col-sm-2 thumbnail bg-info rounded five-day">
-                            <p id="future-date"></p>
-                            <p id="future-icon"></p>
-                            <p>Temp: <span id="future-temp"> </span> </p>
-                            <p>Humidity: <span id="future-humidity"></span></p>
-                        </div>
-                        <div class="col-sm-2 thumbnail bg-info rounded five-day">
-                            <p id="future-date"></p>
-                            <p id="future-icon"></p>
-                            <p>Temp: <span id="future-temp"> </span> </p>
-                            <p>Humidity: <span id="future-humidity"></span></p>
-                        </div>
-                    </div> -->
-                </div>
+
             </div>
         </div>
     </div>
 
-
-
-
-
-
-
-    <!-- <main class="container-md-fluid main">
-        <div class="row searches align-self-end">
-            <div class="col-3  nav-fill">Something
-                <div class="row-3 justify-content-center "> Now I have to write some more stuff</div>
-            </div>
-            <div class="col-9 current wf">Anything?
-                <div class="row five-day align-self-end">
-                    <div class="col five-day"> here is the five day card location</div>
-                </div>
-    </main> -->
-
+    
+    <h4 class="d-flex justify-content-center">This Would Be Your Future:</h4>
+    <div id="fiveDayHome"class="d-flex  justify-content-center">
+               
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
