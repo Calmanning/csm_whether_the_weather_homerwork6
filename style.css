@@ -11,16 +11,12 @@
     background-color: rgb(230, 227, 227)
 }
 
-.main {
-    background-color: peru;
-}
-
 .weather {
     border: 1px solid black;
 }
 
 #clear {
-    margin:0 auto;
+    margin: 5px;
 }
 
 #city {
@@ -35,4 +31,8 @@
 .five-day{
     color: rgb(238, 234, 234);
     margin: 0 5px;
+}
+/* the search button under the text input */
+#search{
+ margin-top: 5px;   
 }

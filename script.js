@@ -19,11 +19,20 @@ var searchHist = [];
 var clearHist = $("#clear")
 var fiveDayEl = $("#fiveDayHome")
 
-//attempting to recall search history
-//function find(searchHist){
-//    for (var i=0; i<searchHist.length; i++){
-//       if
-//} //end of search history recall function
+
+
+var returnCities = JSON.parse(localStorage.getItem("city"));
+console.log(returnCities);
+if (returnCities){
+for (var i = 0; i < returnCities.length; i++){
+    var cityListEl = $("<p>");
+    var prevCityButton = $("<button>");
+    $(prevCityButton).text(returnCities[i]);
+    prevCityButton.addClass("oldCity, rounded bg-info text-white");
+    //prevCityButton.attr("value", searchedCity);
+    (cityListEl).append(prevCityButton);
+    $("#past-cities").prepend(cityListEl);
+}}
 
 function getTheWheather(place) {
         console.log(place)
@@ -45,7 +54,7 @@ function getTheWheather(place) {
 
             todayIconCode = (response.weather[0].icon)
                 console.log("symbol" + todayIconCode)
-            todayIconURL = $("<img>").attr("src", "http://openweathermap.org/img/wn/"+todayIconCode+".png");
+            todayIconURL = $("<img>").attr("src", "https://openweathermap.org/img/wn/"+todayIconCode+".png");
             cityEl.text(response.name);
             iconEl.append(todayIconURL);
             tempEl.text(response.main.temp);
@@ -68,7 +77,7 @@ function getTheWheather(place) {
                 uvEl.text(response.value);
             })
 
-            fiveDayURL = "http://api.openweathermap.org/data/2.5/forecast?q="+place+"&units=imperial&appid=166a433c57516f51dfab1f7edaed8413"
+            fiveDayURL = "https://api.openweathermap.org/data/2.5/forecast?q="+place+"&units=imperial&appid=166a433c57516f51dfab1f7edaed8413"
                 // "api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=166a433c57516f51dfab1f7edaed8413"
 
                 $.get(fiveDayURL).then(function (response) {
@@ -85,7 +94,7 @@ function getTheWheather(place) {
                             var foreIcon = (response.list[i].weather[0].icon)
                         var container = $("#fiveDayHome");
                         var card = $("<div>").addClass("col-sm-2 thumbnail bg-info rounded five-day");
-                        var cardIconURL = $("<img>").attr("src", "http://openweathermap.org/img/wn/"+foreIcon+"@2x.png");
+                        var cardIconURL = $("<img>").attr("src", "https://openweathermap.org/img/wn/"+foreIcon+"@2x.png");
                            
                             container.append(card.append(cardDay, cardIconURL, foreTemp, foreHumid))//add card date & icon
                             //container.append
@@ -107,11 +116,13 @@ function getTheWheather(place) {
 
 
 function makeButton(searchedCity) {
+    var cityListEl = $("<p>");
     var prevCityButton = $("<button>");
     $(prevCityButton).text(searchedCity);
-    prevCityButton.addClass("oldCity");
+    prevCityButton.addClass("oldCity, rounded bg-info text-white");
     //prevCityButton.attr("value", searchedCity);
-    $("#past-cities").prepend(prevCityButton);
+    (cityListEl).append(prevCityButton);
+    $("#past-cities").prepend(cityListEl);
     
 }
 
